@@ -21,7 +21,7 @@ CONFIGS_OFF="
 
 "
 CONFIGS_EQ="
-CONFIG_LOCALVERSION=\"-Marisa\"
+CONFIG_LOCALVERSION=\"-MiuiCX\"
 "
 
 ered() {
