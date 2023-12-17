@@ -1,7 +1,9 @@
 patchf(){
     local file=$1
     local patch=$2
-    [ -f $file ] && patch -p1 < $patch
+    if [ -f $file ] ;then
+        patch -p1 < $patch
+    fi
 }
 
 # patchf kernel/cgroup.c $LXC_PATCHES/cgroup.patch
