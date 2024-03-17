@@ -107,6 +107,7 @@ jobs:
     - name: Download Custom-Clang
       if: env.USE_CUSTOM_CLANG == 'true'
       run: |
+        sudo apt install libarchive-tools
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
         cd clang-aosp
