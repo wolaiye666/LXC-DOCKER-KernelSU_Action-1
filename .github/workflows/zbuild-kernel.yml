@@ -159,14 +159,6 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         bash $GITHUB_WORKSPACE/scripts/check-kernel-config/LXC-DOCKER-OPEN-CONFIG.sh arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }} -w
-
-
-    - name: 打入Makefile补丁
-      if: env.MAKEFILE_PATCH == 'true'
-      run: |
-         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-         patch -p1 < $GITHUB_WORKSPACE/patches/Makefile.patch
-
       
     - name: 打入Android-Container补丁
       if: env.CONTAINER_PATCH == 'true'
